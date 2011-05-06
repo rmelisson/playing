@@ -1,0 +1,11 @@
+div#title your list of list
+
+ul.lists
+	- each list in lists
+		li.list
+			a(href=("/see_list/" + list.name)) #{list.name}
+
+form(method="post", action="add")
+	label(for="new_list_name")
+		input(type="text", name="new_list_name", value="... list name", class="new_name")
+		input(type="submit", value="add!", class="add_button")
