@@ -1,3 +1,5 @@
+require.paths.unshift('./node_modules')
+
 var express = require("express")
 
 var app = express.createServer() 
@@ -12,4 +14,4 @@ app.get('/', function(req, res) {
 	res.render('layout');
 });
 
-app.listen(8000);
+app.listen(process.env.VMC_APP_PORT || 8000);
