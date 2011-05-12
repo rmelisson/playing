@@ -17,8 +17,9 @@ switch_content = function(link) {
 }
 
 $(document).ready(function(){
-	$('#header').corner("tr tl 10px");		
-	$('#home').corner("bl br 10px");		
+	$('#header').corner("tr tl 6px");		
+	$('.content').corner("bl br 6px");		
+	$('#body').corner("10px");		
 	$('#links').corner("5px");		
 	$('.link').corner("tl tr 12px");
 	$('.selected_link').corner("tl tr 12px");

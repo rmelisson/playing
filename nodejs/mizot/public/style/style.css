@@ -11,17 +11,19 @@ body {
 	margin-left: auto; 
 	margin-right: auto;
 	width: 640px;
-	padding: 5px;
+	border: 5px solid #CDB380; 
+	box-shadow: 5px 5px 15px #555;
+	-moz-box-shadow: 5px 5px 15px #555;
+	-webkit-box-shadow: 5px 5px 15px #555;
 }
 
 #header {
 	font-family:"Bangers", "Arial";
 	padding:8px;
-	border: 5px solid #CDB380; 
-	border-bottom:0px;
 	background-color: rgba(232,221,203,0.4);
 	padding-right : 20px;
 	padding-left : 20px;
+	border-bottom: 3px solid #CDB380; 
 }
 
 #title {
@@ -42,6 +44,9 @@ body {
 	padding-left : 40px;
 	margin-bottom: 6px;
 	margin-left: 180px;
+	box-shadow: 3px 3px 10px #555;
+	-moz-box-shadow: 3px 3px 10px #555;
+	-webkit-box-shadow: 3px 3px 10px #555;
 }
 
 .link {
@@ -52,16 +57,20 @@ body {
 }
 
 .selected_link {
-	padding:8px;
-	padding-bottom:15px;
+	padding:10px;
+	padding-bottom:16px;
 	padding-top: 11px;
 	margin:2px;
 
-	color: #E8DDCB;
-	background: #CDB380;
-	border-top: 4px solid #E8DDCB; 
-	border-left: 4px solid #E8DDCB; 
-	border-right: 4px solid #E8DDCB; 
+/*	color: #E8DDCB;*/
+	background: #E8DDCB;
+	border-top: 4px solid #CDB380; 
+	border-left: 4px solid #CDB380; 
+	border-right: 4px solid #CDB380; 
+/*	text-shadow:	#033649 1px 1px 1px,  
+			#033649 -1px 1px 1px,  
+			#033649 -1px -1px 1px,  
+			#033649 1px -1px 1px;  */
 }
 
 #me_img {
@@ -79,12 +88,10 @@ body {
 }
 
 .content {
-	background-color: rgba(232,221,203,0.9);
+	background-color: rgba(232,221,203,1);
 	margin-left: auto; 
 	margin-right: auto;
 	padding: 40px;
-	border: 5px solid #CDB380; 
-	border-top: 0px dashed #CDB380; 
 	text-align:justify;
 }
 
@@ -92,3 +99,15 @@ body {
 	display : none;
 }
 
+#contact {
+	text-align : center;
+}
+
+#download {
+	text-align : center;
+	font-weight : bold;
+}
+#download a, a.visited {
+	text-decoration:none;
+	color: #033649;  
+}
