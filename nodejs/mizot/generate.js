@@ -1,21 +1,27 @@
 var fs = require('fs');
 var jade = require('jade');
+var util = require('util');
+var sys = require('sys')
+var exec = require('child_process').exec;
+
+var root_dir = '/tmp/mizot';
+
+function puts(error, stdout, stderr) { sys.puts(stdout) }
 
 jade.renderFile('./views/layout.jade', function(err, html) {
 	if (err) {
 		console.log(err);
 	} else {
-		fs.mkdir('/tmp/mizot', 0777 );
-		fs.mkdir('/tmp/mizot/javascript/', 0777 );
-		fs.mkdir('/tmp/mizot/style/', 0777 );
-		fs.writeFile("/tmp/mizot/index.html", html, function(err) {
+		// we create the directory and flush html code into an index.html
+		fs.mkdir(root_dir, 0777 );
+		fs.writeFile(root_dir + "/index.html", html, function(err) {
     	if (err) {
 					console.log(err);
     	}
 		}); 
-		
-		var is = fs.createReadStream('./public/style/')
-		var os = fs.createWriteStream('destination_file');
 
+		// we copy all the public files to the root directory
+		exec("cp -R ./public/* " + root_dir, puts);
+		console.log('... done');
 	}
 });
