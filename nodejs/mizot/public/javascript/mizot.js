@@ -6,8 +6,6 @@ switch_content = function(link) {
 	content_id = id.substr(id.lastIndexOf('_') +1);
 	$('#' + content_id).addClass('invisible_content');
 	
-	//addClass('invisible_content');	
-
 	// then we display the right one
 	link.addClass('selected_link');
 	id = link.attr('id');
