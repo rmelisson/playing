@@ -14,15 +14,19 @@ html(lang="en")
 			div#header 
 				div#title /home/rmelisson 
 				div#links 
-					span.selected_link#link_home home 
-					span.link#link_work work
-					span.link#link_publications publications
-					span.link#link_contact contact
-					span.link#link_resume resume
+					span.link.selected_link#link_home: a(href='#') home
+					span.link#link_work: a(href='#') work
+					span.link#link_publications: a(href='#') publications
+					span.link#link_contact: a(href='#') contact
+					span.link#link_resume: a(href='#') resume
 			div.content#home
 				div#img_div
 					img#me_img(src="img/me.jpg")
-				div#welcome <span style="font-size:30px;font-weight:bold;">W</span>elcome here, I'm Remi Melisson, Ph.D. student and enthusiast developper. I started my thesis in october 2010 into the Orange Labs at Grenoble. My work is supervised by the INRIA ADAM Team, associated to the University of Lille 1. Here you can find some information about my work and other computing activities. Feel free to contact me via email, Twitter or why not, smoke signals.
+				div#welcome <span style="font-size:38px;font-weight:bold;">W</span>elcome here, I'm Remi Melisson, Ph.D. student and enthusiast developper. I started my thesis in october 2010 into the 
+					a(href="http://www.orange.com/en_EN/innovation/create/Orange_Labs_network/", "Orange Labs Website") Orange Labs
+					&nbsp;at Grenoble. My work is supervised by the 
+					a(href="http://adam.lille.inria.fr/", "ADAM website") INRIA ADAM Team
+					, associated to the University of Lille 1. Here you can find some information about my work and other computing activities. Feel free to contact me via email, Twitter or why not, smoke signals.
 				div#logo_div
 					img#logo_orange.logo(src="img/orange-logo.png")
 					img#logo_inria.logo(src="img/logo_INRIA.png")
@@ -64,11 +68,11 @@ html(lang="en")
 				span.cv_line Internship, DART Project-Team at INRIA Lille - Nord Europe. Parallel Programming on GPU : ASM, C, C++, CUDA.
 
 			div.content.invisible_content#work
-				h3 Thesis
+				h2 Thesis
 				p.small	blaba lba l abl ablaba lala blalbaalb lbalbaa lbalba
 				br
 				hr
-				... past projects :
+				... past projects
 				h3 Mundle
 				p.small Mundle is a tool which provide a way for dynamically convert maven artifact into OSGi bundles at runtime. Based on bnd and Maven 3 API, it allows to benefit from the Maven dependency description in order to deploy Maven artifact as bundles. This tool should facilitate the migration of standard Maven based Java project onto OSGi platforms.
 				h3 FraSCAti on OSGi
@@ -83,16 +87,15 @@ html(lang="en")
 			div.content.invisible_content#publications 
 				ul
 					li 
-						h3 2011
+						h2 2011
 						ul
 							li
-								p.small blalablablablaa
+								p.small <b>An SCA-based Approach for Social and Pervasive Communications in Home Environments.</b> Rémi Mélisson, Daniel Romero, Romain Rouvoy, Lionel Seinturier. In <i>Scientific Annals of Computer Science (SACS)</i>. 2011.
 					li 
-						hr
 						h3 2010
 						ul
 							li
-								p.small <b>Reconfigurable Run-Time Support for Distributed Service Component Architectures.</b> Rémi Mélisson, Philippe Merle, Daniel Romero, Romain Rouvoy and Lionel Seinturier. In <i>25th International Conference on Automated Software Engineering (ASE'10)</i>. Tool Demonstration. Antwerp, Belgium. September, 2010. To appear. [HAL]
+								p.small <b>Reconfigurable Run-Time Support for Distributed Service Component Architectures.</b> Rémi Mélisson, Philippe Merle, Daniel Romero, Romain Rouvoy and Lionel Seinturier. In <i>25th International Conference on Automated Software Engineering ([ASE'10] (http://soft.vub.ac.be/ase2010/))</i>. Tool Demonstration. Antwerp, Belgium. September, 2010. To appear. [HAL]
 							li
 								p.small <b>Supporting Pervasive and Social Communications with FraSCAti.</b> Rémi Mélisson, Daniel Romero, Romain Rouvoy and Lionel Seinturier. In <i>3rd International Workshop on Context-aware Adaptation Mechanisms for Pervasive and Ubiquitous Services (CAMPUS’10).</i> Electronic Communications of EASST (ECEASST). Amsterdam, Netherlands. June 10, 2010. To appear. [HAL]
 				

@@ -11,6 +11,16 @@ img {
 	border-style: none;
 }
 
+a, a.visited {
+	text-decoration: underline;
+	color: #033649;  
+}
+
+a:hover {
+	color : #036564;
+	text-decoration : none;
+}
+
 #body {
 	margin-left: auto; 
 	margin-right: auto;
@@ -32,7 +42,6 @@ img {
 
 #title {
 	font-size:35px;
-	/*color: rgb(236,208,120);*/
 	text-shadow:	#E8DDCB 1px 1px 2px,  
 			#E8DDCB -1px 1px 2px,  
 			#E8DDCB -1px -1px 2px,  
@@ -59,6 +68,9 @@ img {
 	padding-top: 11px;
 	margin:2px;
 }
+.link a, a.visited, a:hover {
+	text-decoration:none;
+}
 
 .selected_link {
 	padding:10px;
@@ -66,15 +78,10 @@ img {
 	padding-top: 11px;
 	margin:2px;
 
-/*	color: #E8DDCB;*/
 	background: #E8DDCB;
 	border-top: 4px solid #CDB380; 
 	border-left: 4px solid #CDB380; 
 	border-right: 4px solid #CDB380; 
-/*	text-shadow:	#033649 1px 1px 1px,  
-			#033649 -1px 1px 1px,  
-			#033649 -1px -1px 1px,  
-			#033649 1px -1px 1px;  */
 }
 
 #welcome {
@@ -132,18 +139,28 @@ img {
 	text-align : center;
 	font-weight : bold;
 }
+
 #download a, a.visited {
 	text-decoration:none;
-	color: #033649;  
 }
 
 h3 {
 	font-weight : bold;
 	color : #036564;
-	margin-top : 20px;
+	margin-top : 25px;
+	padding-top : 25px;
 	margin-bottom : 5px;
 	font-size : 22px;
 }
+
+h2 {
+	font-weight : bold;
+	color : #036564;
+	margin-top : 10px;
+	margin-bottom : 5px;
+	font-size : 22px;
+}
+
 
 .hash3{
 	font-weight : bold;
