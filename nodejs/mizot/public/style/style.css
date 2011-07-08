@@ -92,6 +92,7 @@ img {
 #img_div {
 	float : left;
 	padding : 10px;
+	padding-bottom : 0px;
 	margin-right: 20px;
 }
 
@@ -138,16 +139,26 @@ img {
 
 h3 {
 	font-weight : bold;
-	font-style : italic;
-	text-decoration : underline;
 	color : #036564;
 	margin-top : 20px;
 	margin-bottom : 5px;
 	font-size : 22px;
 }
 
+.hash3{
+	font-weight : bold;
+	color : #036564;
+	font-size : 20px;
+	padding-right : 16px;
+}
+
+.cv_line {
+	font-size : 16px;
+}
+
 .small {
-	font-size : 13px;	
+	margin-left : 10px;
+	font-size : 14px;	
 }
 
 ul { 
