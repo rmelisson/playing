@@ -18,7 +18,8 @@ rss_content = ""
 
 # constants
 url_stream = "http://www.wefunkradio.com/mirror/stream/"
-url_files = "http://wf.digvm.com/"
+#url_files = "http://wf.digvm.com/"
+url_files = "wefunk.xcrit.com"
 
 # Read the feed into rss_content
 open(rss_feed) do |f|
@@ -39,9 +40,10 @@ rss.items.each do |item|
 	ep_link = item.link
 	ep_date = ep_link[ep_link.rindex('/') + 1, ep_link.size]
 	ep_file = "WeFunk_Show_" + ep_num + '_' + ep_date + ".mp3"
-	ep_url = url_files + ep_file 
-	head = Net::HTTP.new('wf.digvm.com', 80).request_head('/' + ep_file)
-   item.enclosure = RSS::Rss::Channel::Item::Enclosure.new(ep_url, head.content_length, head.content_type)
+	ep_url = "http://" + url_files + "/" + ep_file 
+	puts ep_url
+	head = Net::HTTP.new(url_files, 80).request_head('/' + ep_file)
+  item.enclosure = RSS::Rss::Channel::Item::Enclosure.new(ep_url, head.content_length, head.content_type)
 end
 
 server = TCPServer.new(2000)  # Socket to listen on port 2000
