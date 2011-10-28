@@ -1,101 +1,102 @@
 !!! 5
 html(lang="en")
-	head
-		title rmelisson
-		link(href="style/style.css", media="screen", rel="stylesheet", type="text/css")
-		link(href="http://fonts.googleapis.com/css?family=Bangers", rel="stylesheet", type="text/css")
-		link(href="http://fonts.googleapis.com/css?family=Open+Sans", rel="stylesheet", type="text/css")
-		link(href="img/favicon.png", type="image/png", rel="shortucut icon")
-		script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js")
-		script(src="javascript/jquery.corner.js")
-		script(src="javascript/mizot.js")
-	body
-		div#body
-			div#header 
-				div#title /home/rmelisson 
-				div#links 
-					span.link.selected_link#link_home: a(href='#') home
-					span.link#link_work: a(href='#') work
-					span.link#link_publications: a(href='#') publications
-					span.link#link_contact: a(href='#') contact
-					span.link#link_resume: a(href='#') resume
-			div.content#home
-				div#img_div
-					img#me_img(src="img/me.jpg")
-				div#welcome <span style="font-size:38px;font-weight:bold;">W</span>elcome here, I'm Remi Melisson, Ph.D. student and enthusiast developper. I started my thesis in october 2010 into the 
-					a(href="http://www.orange.com/en_EN/innovation/create/Orange_Labs_network/", "Orange Labs Website") Orange Labs
-					&nbsp;at Grenoble. My work is supervised by the 
-					a(href="http://adam.lille.inria.fr/", "ADAM website") INRIA ADAM Team
-					, associated to the University of Lille 1. Here you can find some information about my work and other computing activities. Feel free to contact me via email, Twitter or why not, smoke signals.
-				div#logo_div
-					img#logo_orange.logo(src="img/orange-logo.png")
-					img#logo_inria.logo(src="img/logo_INRIA.png")
-			div.content.invisible_content#contact Well, you can find me there : <br /><br />
-				<a href="http://www.twitter.com/rmelisson"><img src="http://twitter-badges.s3.amazonaws.com/t_logo-a.png" alt="Follow rmelisson on Twitter"/></a>
-				<br/>
-				<br/>
-				<a href="http://www.github.com/rmelisson"><img src="https://github.com/images/modules/header/logov3.png" alt="me on GitHub"/></a>
-				<br/>
-				<br/>
-				span#liam
-					<img src="img/enveloppe.jpg" alt="send me"/> 
+    head
+        title rmelisson
+        link(href="style/style.css", media="screen", rel="stylesheet", type="text/css")
+        link(href="http://fonts.googleapis.com/css?family=Bangers", rel="stylesheet", type="text/css")
+        link(href="http://fonts.googleapis.com/css?family=Open+Sans", rel="stylesheet", type="text/css")
+        link(href="img/favicon.png", type="image/png", rel="shortucut icon")
+        script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js")
+        script(src="javascript/jquery.corner.js")
+        script(src="javascript/mizot.js")
+    body
+        div#body
+            div#header 
+                div#title /home/rmelisson 
+                div#links 
+                    span.link.selected_link#link_home: a(href='#') home
+                    span.link#link_work: a(href='#') work
+                    span.link#link_publications: a(href='#') publications
+                    span.link#link_contact: a(href='#') contact
+                    span.link#link_resume: a(href='#') resume
+            div.content#home
+                div#img_div
+                    img#me_img(src="img/id.jpg")
+                div#welcome <span style="font-size:38px;font-weight:bold;">W</span>elcome here, I'm Remi Melisson, Ph.D. student and enthusiast developper. I started my thesis in october 2010 into the 
+                    a(href="http://www.orange.com/en_EN/innovation/create/Orange_Labs_network/", "Orange Labs Website") Orange Labs
+                    &nbsp;at Grenoble. My work is supervised by the 
+                    a(href="http://adam.lille.inria.fr/", "ADAM website") INRIA ADAM Team
+                    , associated to the University of Lille 1. Here you can find some information about my work and other computing activities. Feel free to contact me via email, Twitter or why not, smoke signals.
+                div#logo_div
+                    img#logo_orange.logo(src="img/orange-logo.png")
+                    img#logo_inria.logo(src="img/logo_INRIA.png")
+            div.content.invisible_content#contact Well, you can find me there : <br /><br />
+                <a href="http://www.twitter.com/rmelisson"><img src="http://twitter-badges.s3.amazonaws.com/t_logo-a.png" alt="Follow rmelisson on Twitter"/></a>
+                <br/>
+                <br/>
+                <a href="http://www.github.com/rmelisson"><img src="https://github.com/images/modules/header/logov3.png" alt="me on GitHub"/></a>
+                <br/>
+                <br/>
+                span#liam
+                    <img src="img/enveloppe.jpg" alt="send me"/> 
 
-			div.content.invisible_content#resume Download my resume :
-				div#download
-					a(href='/', 'french resume') FR
-					\ / 
-					a(href='/', 'english resume') EN
-				br
-				hr
-				br
-				span.hash3 now 
-				span.cv_line Ph.D. student, with the INRIA ADAM Project-Team and the Orange Labs, Meylan
-				br
-				br
-				span.hash3 2010
-				span.cv_line Research Engineer, ADAM Project-Team at INRIA Lille - Nord Europe.
-				br
-				br
-				span.hash3 2009
-				span.cv_line Master Degree at the University of Lille : Software Engineering and Architecture - Ingenierie et architecture logicielle
-				br
-				br
-				span.hash3 2009
-				span.cv_line End-of-studies internship at Open for 6 months. Software engineering : .Net, Spring, NHibernate - Project management. Paris.
-				br
-				br
-				span.hash3 2008
-				span.cv_line Internship, DART Project-Team at INRIA Lille - Nord Europe. Parallel Programming on GPU : ASM, C, C++, CUDA.
+            div.content.invisible_content#resume 
+                //- Download my resume :
+                    div#download
+                        a(href='/', 'french resume') FR
+                        \ / 
+                        a(href='/', 'english resume') EN
+                  br
+                  hr
+                  br
+                span.hash3 now 
+                span.cv_line Ph.D. student, with the INRIA ADAM Project-Team and the Orange Labs, Meylan
+                br
+                br
+                span.hash3 2010
+                span.cv_line Research Engineer, ADAM Project-Team at INRIA Lille - Nord Europe.
+                br
+                br
+                span.hash3 2009
+                span.cv_line Master Degree at the University of Lille : Software Engineering and Architecture - Ingenierie et architecture logicielle
+                br
+                br
+                span.hash3 2009
+                span.cv_line End-of-studies internship at Open for 6 months. Software engineering : .Net, Spring, NHibernate - Project management. Paris.
+                br
+                br
+                span.hash3 2008
+                span.cv_line Internship, DART Project-Team at INRIA Lille - Nord Europe. Parallel Programming on GPU : ASM, C, C++, CUDA.
 
-			div.content.invisible_content#work
-				h2 Thesis
-				p.small	blaba lba l abl ablaba lala blalbaalb lbalbaa lbalba
-				br
-				hr
-				... past projects
-				h3 Mundle
-				p.small Mundle is a tool which provide a way for dynamically convert maven artifact into OSGi bundles at runtime. Based on bnd and Maven 3 API, it allows to benefit from the Maven dependency description in order to deploy Maven artifact as bundles. This tool should facilitate the migration of standard Maven based Java project onto OSGi platforms.
-				h3 FraSCAti on OSGi
-				p.small FraSCAti is a Java implementation of the Service Component Architecture (SCA) standard. It relies on the Fracal component model in order to allow dynamic reconfiguration on SCA based software. I am working on a merge between SCA and OSGi concept which could clarify the different responsibilities of those specifications.
-				h3 FraSCAti @authentication
-				p.small coming soon... 
-				h3 Binjiu
-				p.small Binjiu is a set of facility for using UPnP protocol in order to achieve remote calls within Java distributed applications. Building on top of CyberLink for Java (which is a java implementation of UPnP protocol), it supplies the discovery benefits of UPnP to service oriented Java software.
-				h3 MIND Project
-				p.small MIND is a project which depend on the Minalogic global competitive cluster. This project aims to provide a model and a valid infrastructure for developing lightweight (as well as dramatically lightweight) embedded software according to component based software engineering paradigms. More precisely, we are taking part in the development of an IDE (textual and graphical integrated editors) for component architecture definition. To achieve those goals, we are using the Fractal component model and the Eclipse Modeling Framework (EMF, GMF, TMF-Xtext).
+            div.content.invisible_content#work
+                h2 Thesis
+                p.small I'm actually working on my Ph.D. study, which aims to propose an End2End architecture for virtualize the Orange Set Top Box into the operator infrastructure. 3 goals have been identified : deliver STB services to every home devices with rendering capabilities; move STB functions to operator infrastructure in a scalable and adaptable way; provide proxies for OTT (Over The Top : Google, Facebook...) services into the LAN across home networks standards.
+                br
+                hr
+                ... past projects
+                h3 Mundle
+                p.small Mundle is a tool which provide a way for dynamically convert maven artifact into OSGi bundles at runtime. Based on bnd and Maven 3 API, it allows to benefit from the Maven dependency description in order to deploy Maven artifact as bundles. This tool should facilitate the migration of standard Maven based Java project onto OSGi platforms.
+                h3 FraSCAti on OSGi
+                p.small FraSCAti is a Java implementation of the Service Component Architecture (SCA) standard. It relies on the Fracal component model in order to allow dynamic reconfiguration on SCA based software. I am working on a merge between SCA and OSGi concept which could clarify the different responsibilities of those specifications.
+                h3 FraSCAti @authentication
+                p.small coming soon... 
+                h3 Binjiu
+                p.small Binjiu is a set of facility for using UPnP protocol in order to achieve remote calls within Java distributed applications. Building on top of CyberLink for Java (which is a java implementation of UPnP protocol), it supplies the discovery benefits of UPnP to service oriented Java software.
+                h3 MIND Project
+                p.small MIND is a project which depend on the Minalogic global competitive cluster. This project aims to provide a model and a valid infrastructure for developing lightweight (as well as dramatically lightweight) embedded software according to component based software engineering paradigms. More precisely, we are taking part in the development of an IDE (textual and graphical integrated editors) for component architecture definition. To achieve those goals, we are using the Fractal component model and the Eclipse Modeling Framework (EMF, GMF, TMF-Xtext).
 
-			div.content.invisible_content#publications 
-				ul
-					li 
-						h2 2011
-						ul
-							li
-								p.small <b>An SCA-based Approach for Social and Pervasive Communications in Home Environments.</b> Rémi Mélisson, Daniel Romero, Romain Rouvoy, Lionel Seinturier. In <i>Scientific Annals of Computer Science (SACS)</i>. 2011.
-					li 
-						h3 2010
-						ul
-							li
-								p.small <b>Reconfigurable Run-Time Support for Distributed Service Component Architectures.</b> Rémi Mélisson, Philippe Merle, Daniel Romero, Romain Rouvoy and Lionel Seinturier. In <i>25th International Conference on Automated Software Engineering ([ASE'10] (http://soft.vub.ac.be/ase2010/))</i>. Tool Demonstration. Antwerp, Belgium. September, 2010. To appear. [HAL]
-							li
-								p.small <b>Supporting Pervasive and Social Communications with FraSCAti.</b> Rémi Mélisson, Daniel Romero, Romain Rouvoy and Lionel Seinturier. In <i>3rd International Workshop on Context-aware Adaptation Mechanisms for Pervasive and Ubiquitous Services (CAMPUS’10).</i> Electronic Communications of EASST (ECEASST). Amsterdam, Netherlands. June 10, 2010. To appear. [HAL]
-				
+            div.content.invisible_content#publications 
+                ul
+                    li 
+                        h3 2011
+                        ul
+                            li
+                                p.small <b>An SCA-based Approach for Social and Pervasive Communications in Home Environments.</b> Remi Melisson, Daniel Romero, Romain Rouvoy, Lionel Seinturier. In <i>Scientific Annals of Computer Science (SACS)</i>. 2011. To appear. [HAL]
+                    li 
+                        h3 2010
+                        ul
+                            li
+                                p.small <b>Reconfigurable Run-Time Support for Distributed Service Component Architectures.</b> Remi Melisson, Philippe Merle, Daniel Romero, Romain Rouvoy and Lionel Seinturier. In <i>25th International Conference on Automated Software Engineering ([ASE'10] (http://soft.vub.ac.be/ase2010/))</i>. Tool Demonstration. Antwerp, Belgium. September, 2010. To appear. [HAL]
+                            li
+                                p.small <b>Supporting Pervasive and Social Communications with FraSCAti.</b> Remi Melisson, Daniel Romero, Romain Rouvoy and Lionel Seinturier. In <i>3rd International Workshop on Context-aware Adaptation Mechanisms for Pervasive and Ubiquitous Services (CAMPUS’10).</i> Electronic Communications of EASST (ECEASST). Amsterdam, Netherlands. June 10, 2010. To appear. [HAL]
+                
