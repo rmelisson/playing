@@ -18,11 +18,16 @@ class Person:
 		self.surnom = s
 		self.email = e
 
+class Couple:
+	"A couple is two person together, they already exchange gift for christmas..."
+	def __init__(
+
 class GiftMixer:
 	"GiftMixer is a simple class which can associate friends for exchange gifts and is also able to send email to those guys "
 
-	def __init__(self, l):
+	def __init__(self, l, c):
 		self.friends = l
+		self.couples = c
 	
 	def mix(self):
 		self.associations = []
@@ -82,7 +87,7 @@ class GiftMixer:
 		return
 		s.quit
 
-	def assert_associations(self, l, a):
+	def assert_associations(self, l, a, c):
 		if (a == []):
 			return False
 		#Assert that there is as many people as associations.
@@ -91,9 +96,11 @@ class GiftMixer:
 		senders = []
 		receivers = []
 		for (s,r) in a:
+			#Assert this association is not a couple
+			assert ! (s,r) in c
 			senders.append(s)
 			receivers.append(r)
-			#autosend is not for christmas, but for the rest of the year :)
+			#Autosend is not for christmas, but for the rest of the year :)
 			assert s != r
 		for p in l:
 			assert p in senders
@@ -121,7 +128,8 @@ def start_test():
 	paul = Person("paul", "p", "polo", "p@p.p")
 	marc = Person("marc", "m", "marco", "m@m.m")
 
-	l = [jean, paul, marc]
+	l = [jean, paul, marc, marie]
+	c = [ (marc, marie) ]
 	a_ok = [ (jean, paul), (marc, jean), (paul, marc) ]
 	a_nok1 = [ (jean, paul), (marc, jean), (jean, paul) ]
 	a_nok2 = [ (jean, paul), (marc, jean), (paul, paul), (paul, marc) ]
@@ -185,5 +193,5 @@ robot = Person("Rob", "Ho", "we're the robots", "remi.melisson@hotmail.fr")
 l = create_list()
 
 #step_one(l)
-step_two(l)
+#step_two(l)
 
