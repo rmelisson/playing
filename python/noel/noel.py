@@ -55,7 +55,7 @@ class GiftMixer:
         for f in self.friends:
             names += name_tmpl.substitute(prenom = f.prenom, nom = f.nom, surnom = f.surnom)
 
-        txt_tmpl = Template("Yo yo $prenom $nom\nTu as l'immense chance de t'être selectionné(e) pour le gift mix 2010, une expérience bouleversante qui renversera ce noël.\nVoici la liste des amigos:\n\n$liste \nUn second mail te dévoilera l'identité de l'heureux élu à qui destiner ton cadeau!\ncya cya.\nGiftMixer Robot 1.10")
+        txt_tmpl = Template("Yo yo $prenom $nom\nTu as l'immense chance de t'être selectionné(e) pour le gift mix 2011, une expérience bouleversante qui renversera (encore) ce noël.\nVoici la liste des amigos:\n\n$liste \nUn second mail te dévoilera l'identité de l'heureux élu à qui destiner ton cadeau!\ncya cya.\nGiftMixer Robot 1.11")
         s = smtplib.SMTP('smtp.sfr.fr')
         s.set_debuglevel(1)
         for f in self.friends:
@@ -71,7 +71,8 @@ class GiftMixer:
 
 
     def mail_gifter(self):
-        txt_tmpl = Template("Yo, \nTon cadeau, c'est à $prenom $nom \"$surnom\" que tu dois l'envoyer! No rules, c'est toi qui vois.\ncya.\nGiftMixer Robot 1.10")
+        #txt_tmpl = Template("Yo, \nTon cadeau, c'est à $prenom $nom \"$surnom\" que tu dois l'envoyer! No rules, c'est toi qui vois.\ncya.\nGiftMixer Robot 1.11")
+        txt_tmpl = Template("Yo, \nTon cadeau, c'est à $prenom que tu dois l'envoyer! Pas de regle, c'est toi qui vois.\ncya.\nGiftMixer Robot 1.11")
         s = smtplib.SMTP('smtp.sfr.fr')
         s.set_debuglevel(1)
         for (f, r) in self.associations:
@@ -108,14 +109,14 @@ class GiftMixer:
 
 ####### SEQUENCE
 
-def step_one(l):
+def step_one(lc):
     "at first we send an announcement in order to verify adresses"
-    giftMixer = GiftMixer(l)
+    giftMixer = GiftMixer(lc[0], lc[1])
     giftMixer.mail_start()
 
-def step_two(l):
+def step_two(lc):
     "then we mix the list, save a report and send the second mail with the name of the receiver"
-    giftMixer = GiftMixer(l)
+    giftMixer = GiftMixer(lc[0], lc[1])
     giftMixer.mix()
     giftMixer.report()
     giftMixer.mail_gifter()
@@ -180,33 +181,44 @@ def create_list():
     ge = Person('Germain', 'Dble', 'hipster', 'dbleg.adamski@gmail.com' )
     verv = Person('Romu', 'Verherf', 'skieur2province', 'romu83@gmail.com')
     mkton = Person('Remi', 'Mich***', 'mkton', 'rmelisson@gmail.com')
-    edouard = Person('Edouard', 'Mutsch', 'la scie', 'edouard.mutschler@gmail.com')
+#edouard = Person('Edouard', 'Mutsch', 'la scie', 'edouard.mutschler@gmail.com')
     sarah = Person('Sarah', 'Françoise', 'bisha59', 'bisha002@hotmail.com')
     quentin = Person('Quentin', 'III', 'napoleon', 'quentinlabre@hotmail.fr')
-    lucie = Person('Lucie', '', '', '?????????@hotmail.fr')
-    morgane = Person('Morgane', '', '', '?????@?.fr')
-    perrine = Person('Perrine', '', '', '?????@?.fr')
-    momo = Person('Momo', '', '', '?????@?.fr')
+    #lucie = Person('Lucie', '', '', '?????????@hotmail.fr')
+    morgane = Person('Morgane', 'LG', 'Public Relations', 'legallmorgane@yahoo.fr')
+    #perrine = Person('Perrine', '', '', '?????@?.fr')
+    momo = Person('Amaury', 'M', 'momo', 'amaury.marandin@hotmail.fr')
+    mayo = Person('Mayo', 'NdP', 'le Rochelais', 'mayoel@hotmail.fr')
     #cedric = Person('Cedric', 'ho yé', 'cmdt', 'cedric.ogez@gmail.com')
     #elodie = Person('Elodie', 'Maze', 'eltof', 'dodiem2@hotmail.com')
     #xav = Person('Xav', 'Lavigne', 'hornet rulz', 'lavigne.xavier@gmail.com')
 
-    l = [ben, adri, agathe, nath, franz, dum, ge, verv, mkton, edouard, sarah,
-            quentin, perrine, morgane, momo]
-    c = [ (adri, sarah), (dum, agathe), (franz, nath), (verv, lucie)]
+    l = [ben, adri, agathe, nath, franz, dum, ge, verv, mkton, sarah,
+            quentin, mayo, morgane, momo]
+    c = [ (adri, sarah), (dum, agathe), (franz, nath)]
     return [l, c]
+
+####### GE LIST 
+def create_ge_list():
+    agathe = Person('Agathe', '', '', 'vanweydeveldt.agathe@hotmail.fr')
+    flo = Person('Florentin', '', '', 'florentinadamski@hotmail.fr')
+    lorie = Person('Lorie', '', '', 'lo1126@hotmail.com')
+    valentin = Person('Valentin', '', '', 'valentin.adamski@gmail.com')        
+    germain = Person('Germain', '', '', 'dbleg.adamski@gmail.com')
+    l = [agathe, flo, lorie, valentin, germain]
+    return [l, []]
+
 
 remim = Person('Remi', 'Melisson', 'remi', 'rmelisson@gmail.com')
 mkton = Person('mk', 'Tom', 'mkton', '0.mkton.0@gmail.com')
 robot = Person("Rob", "Ho", "we're the robots", "remi.melisson@hotmail.fr")
+#lc = ([robot, mkton, remim], [])
 
-#l = [robot, mkton, remim]
 lc = create_list()
 
-giftMixer = GiftMixer(lc[0], lc[1])
-giftMixer.mix()
-giftMixer.report()
+#giftMixer = GiftMixer(lc[0], lc[1])
+#giftMixer.mix()
+#giftMixer.report()
 
-#step_one(l)
-#step_two(l)
-
+step_one(lc)
+#step_two(lc)
