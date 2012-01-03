@@ -4,5 +4,6 @@
 	"dependencies":{
 		"express":"",
 		"jade":""
+		"sass":""
 	}
 }

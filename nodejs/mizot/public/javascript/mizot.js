@@ -16,7 +16,7 @@ switch_content = function(link) {
 
 $(document).ready(function(){
 	$('#header').corner("tr tl 6px");		
-	$('.content').corner("bl br 6px");		
+	$('.content').corner("bl br tl tr 6px");		
 	$('#body').corner("10px");		
 	$('#links').corner("5px");		
 	$('.link').corner("tl tr 12px");
