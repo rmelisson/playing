@@ -1,5 +1,6 @@
 using express, jade
 and jquery corner
+( wget -P public/javascript/ http://malsup.github.com/jquery.corner.js )
 color template : http://www.colourlovers.com/palette/292482/Terra
 
 TODO :
