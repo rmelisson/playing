@@ -1,0 +1,6 @@
+Getting all items from google reader :
+http://www.google.com/reader/atom/feed/http://chanceswithwolves.blogspot.com/feeds/posts/default?n=1000
+But it implies being connected to google reader for using the API...
+
+Stack Overflow about old items :
+http://stackoverflow.com/questions/576552/how-do-i-fetch-all-old-items-on-an-rss-feed
