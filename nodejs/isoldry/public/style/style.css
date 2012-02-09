@@ -1,0 +1,35 @@
+body {
+	font-size: 20px;
+    color: #656566;
+	font-family: "Gudea", "Arial", "Helvetica", sans-serif;
+}
+
+#main {
+	/*box-shadow: 5px 5px 15px #555;
+	-moz-box-shadow: 5px 5px 15px #555;
+	-webkit-box-shadow: 5px 5px 15px #555;*/
+	background-color: white;
+	margin-left: auto; 
+	margin-right: auto;
+	margin-top: 70px;
+	padding: 30px;
+    width: 560px;
+    border: 5px solid #bababa;
+}
+
+#logo {
+    width: 160px;
+}
+
+#left {
+    display: inline-block;
+}
+
+#right {
+	margin-top: 15px;
+	margin-left: 10px;
+    width: 390px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
