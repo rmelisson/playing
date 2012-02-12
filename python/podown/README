@@ -4,3 +4,9 @@ But it implies being connected to google reader for using the API...
 
 Stack Overflow about old items :
 http://stackoverflow.com/questions/576552/how-do-i-fetch-all-old-items-on-an-rss-feed
+
+Steps :
+- create list of file to download
+	intersection btw downloaded episodes and available episodes
+- create a bijection btw file name (or metadata) and xml entry
+- thread for downloading file, include metadata
