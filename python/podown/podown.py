@@ -16,9 +16,9 @@ for item in feed[ "items" ]:
     #print html_content
     soup = BeautifulSoup( html_content )
     for a in soup.findAll( "a" ):
-	    #if a['href'].contains
-	    href = a.get( "href" )
-	    if (href.startswith(provider) and "PlayListID" in href) :
-		print( item[ "title" ] )
-	    	print( href )
-		print
+        #if a['href'].contains
+        href = a.get( "href" )
+        if (href.startswith(provider) and "PlayListID" in href) :
+            print( item[ "title" ] )
+            print( href )
+        print
