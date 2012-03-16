@@ -2,6 +2,7 @@ body {
 	font-size: 20px;
     color: #656566;
 	font-family: "Gudea", "Arial", "Helvetica", sans-serif;
+  background-image:url('../img/back.jpg');
 }
 
 #main {
