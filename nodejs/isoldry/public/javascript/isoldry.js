@@ -16,6 +16,7 @@ switch_content = function(link) {
 
 $(document).ready(function() {
     $('#main').corner("tl tr bl br 20px");
+    $('#news').corner("tl br 20px");
 
 	$('.selected_link').click( function() {
 		switch_content($(this));		

@@ -1,7 +1,8 @@
 body {
-    font-size: 20px;
+    font-size: 15px;
     color: #656566;
     font-family: "Gudea", "Arial", "Helvetica", sans-serif;
+    background-image: "img/texture.jpeg";
 }
 
 a, a.visited {
@@ -11,43 +12,66 @@ a, a.visited {
 
 #header {
     text-align: center;
+    background-color: #FFFFFF;
 }
 
 #logo {
     margin-left: auto; 
     margin-right: auto; 
-    width: 160px;
 }
 
 #links {
-    border-top: 1px solid #bababa;
-    border-bottom: 1px solid #bababa;
     padding: 12px;
+    padding-top: 20px;
+    background-color: #FFFFFF;
 }
 
 .selected_link a {
-    color: #919111;
+    border-bottom: 2px solid #95aabc;
+    color: #95aabc;
 }
 
 .link {
-    font-size: 25px;
+    font-size: 20px;
     padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #main {
     /*box-shadow: 5px 5px 15px #555;
     -moz-box-shadow: 5px 5px 15px #555;
     -webkit-box-shadow: 5px 5px 15px #555;*/
+    width: 640px;
+    margin-top: 50px;; 
     margin-left: auto; 
     margin-right: auto;
-    margin-top : 45px;
-    width: 640px;
+    background-color: #EDEDDF;
+    border: 3px solid #bababa;    
+}
+
+.content {
+    padding: 40px;
+    padding-top : 20px;
+    padding-bottom : 100px;
+}
+
+.invisible_content {
+    display: none;
 }
 
 #accueil {
     text-align: justify;
 }
 
-.invisible_content {
-    display: none;
+#news {
+    border: 3px solid #bababa;    
+    width: 170px;
+    float: right;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-left: 20px;
+    padding: 10px;
+    background: #FFFFFF;
 }
+
