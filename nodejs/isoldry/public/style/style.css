@@ -2,7 +2,8 @@ body {
     font-size: 15px;
     color: #656566;
     font-family: "Gudea", "Arial", "Helvetica", sans-serif;
-    background-image: "img/texture.jpeg";
+    background-image: url("../img/texture.png");
+
 }
 
 a, a.visited {
@@ -23,12 +24,13 @@ a, a.visited {
 #links {
     padding: 12px;
     padding-top: 20px;
-    background-color: #FFFFFF;
+    background-color: #c3cdd5;
 }
 
 .selected_link a {
     border-bottom: 2px solid #95aabc;
     color: #95aabc;
+    background: #FFFFFF;
 }
 
 .link {
