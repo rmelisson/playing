@@ -1,0 +1,34 @@
+!!! 5
+html(lang="fr")
+    head
+        title isoldry
+        link(href="style/style.css", media="screen", rel="stylesheet", type="text/css")
+        link(href="http://fonts.googleapis.com/css?family=Gudea", rel="stylesheet", type="text/css")
+        script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js")
+        //script(src="javascript/jquery.min.js")
+        script(src="javascript/jquery.corner.js")
+        script(src="javascript/isoldry.js")
+    body
+        div#header
+          div#logo
+            img#logo-img(src="img/logo.png")
+          div#banlien
+              div#banniere
+                img#banniere-img(src="img/banniere-bis.png")
+              div#links
+                span.link.selected_link#link_accueil: a(href='#') Accueil
+                span.link#link_ite: a(href='#') ITE
+                span.link#link_references: a(href='#') References
+                span.link#link_produits: a(href='#') Produits
+                span.link#link_contact: a(href='#') Contact
+        div#main 
+            div.content#accueil
+              div#news <b>News</b> <br /> Isoldry sera présent sur le salon blabla à Lille le 28 août, plus d'info sur la <a href="http://www.google.com/">page dédiée</a>
+              p Bienvenue chez Isoldry, le spécialiste des systèmes de revêtement de façade Dryvit. <br /><br /> Vous trouverez ici des informations concernant nos produits ainsi que nos coordonnées. Nous vous invitons également à essayer notre calculateur de résistance thermique. 
+              p ij poij p poj poj pojpoj pojpoj pj poj. ozid pzovj ezfpoz oizhofho zoeihfzoe ozie ozihe ozie oize oihzeoihoh zoiezpfj
+              p ij poij p poj poj pojpoj pojpoj pj poj. ozid pzovj ezfpoz oizhofho zoeihfzoe ozie ozihe ozie oize oihzeoihoh zoiezpfj
+            div.content.invisible_content#produits
+              p Nous distribuons l'ensemble de la gamme Drivyt.
+            div.content.invisible_content#contact 
+              p Contact commercial : amaury.marandin@isoldry.com <br /> <br />Port Fluvial 2ème Ave 8ème Rue <br /> 59000 LILLE <br />
+              p <iframe width="600" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.fr/maps?f=q&source=s_q&hl=fr&geocode=&q=8%C3%A8me+Rue,+Lille&aq=0&oq=8%C3%A8me&sll=50.62751,3.029931&sspn=0.008358,0.01929&vpsrc=0&ie=UTF8&hq=&hnear=8%C3%A8me+Rue,+59000+Lille,+Nord,+Nord-Pas-de-Calais&ll=50.62751,3.029931&spn=0.008358,0.01929&t=m&z=14&output=embed"></iframe><br /><small><a href="http://maps.google.fr/maps?f=q&source=embed&hl=fr&geocode=&q=8%C3%A8me+Rue,+Lille&aq=0&oq=8%C3%A8me&sll=50.62751,3.029931&sspn=0.008358,0.01929&vpsrc=0&ie=UTF8&hq=&hnear=8%C3%A8me+Rue,+59000+Lille,+Nord,+Nord-Pas-de-Calais&ll=50.62751,3.029931&spn=0.008358,0.01929&t=m&z=14" style="color:#0000FF;text-align:left" target="_blank">Agrandir le plan</a></small>

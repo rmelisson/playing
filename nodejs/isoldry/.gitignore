@@ -1,2 +1,3 @@
-./node_modules/
-./_filedir
+node_modules/
+_filedir
+bootstrap/

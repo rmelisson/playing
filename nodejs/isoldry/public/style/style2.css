@@ -1,0 +1,32 @@
+body {
+    background-image: url("../img/texture.png"); 
+}
+
+footer {
+    text-align: center;
+}
+
+#main{
+    background-color: #FFFFFF;
+}
+
+#logo-img{
+    width: 160px;
+}
+
+#banniere{
+    background-color: #FFFDCF;
+    text-align: right;
+}
+
+#banniere-img{
+    height: 150px;
+}
+
+#links {
+    text-align: right;
+}
+
+#link {
+
+}

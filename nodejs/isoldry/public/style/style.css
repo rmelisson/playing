@@ -1,24 +1,40 @@
 body {
     font-size: 15px;
-    color: #656566;
+    color: #616166;
     font-family: "Gudea", "Arial", "Helvetica", sans-serif;
     background-image: url("../img/texture.png");
 
 }
 
 a, a.visited {
-    color: #656566;
+    color: #616166;
     text-decoration: none;
 }
 
+
+/* Solution 1 */
+
 #header {
-    text-align: center;
     background-color: #FFFFFF;
 }
 
+#logo-img {
+    height:180px;
+    position:relative;
+    border : solid 1px;
+}
+#banlien {
+    position:absolute;
+    right:0px;
+}
+#banniere-img {
+    height:130px;
+}
+
 #logo {
-    margin-left: auto; 
-    margin-right: auto; 
+    position:relative;
+    border : solid 1px;
+    width:140px;
 }
 
 #links {
@@ -26,6 +42,8 @@ a, a.visited {
     padding-top: 20px;
     background-color: #c3cdd5;
 }
+
+/* Solution 2 */
 
 .selected_link a {
     border-bottom: 2px solid #95aabc;
@@ -41,9 +59,9 @@ a, a.visited {
 }
 
 #main {
-    /*box-shadow: 5px 5px 15px #555;
+    box-shadow: 5px 5px 15px #555;
     -moz-box-shadow: 5px 5px 15px #555;
-    -webkit-box-shadow: 5px 5px 15px #555;*/
+    -webkit-box-shadow: 5px 5px 15px #555;
     width: 640px;
     margin-top: 50px;; 
     margin-left: auto; 
