@@ -2,24 +2,42 @@
 html(lang="fr")
     head
         title isoldry
+        script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js")
+        //script(src="javascript/jquery.min.js")
+        script(src="javascript/jquery.corner.js")
+        script(src="javascript/isoldry.js")
         link(href="style/bootstrap/bootstrap.min.css", type="text/css", rel="stylesheet")
         link(href="style/style2.css", type="text/css", rel="stylesheet")
+        link(href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz", rel="stylesheet", type="text/css")
     body
         div.container#main
             div.row
-                div.span2 
+                div.span2.logo-div
                     img#logo-img(src="img/logo.png")
-                div.span10 
+                div.span10
                     div#banniere
                         img#banniere-img(src="img/banniere-bis.png")
+                    //
+                        div.navbar
+                            div.navbar-inner
+                                div.container
+                                    ul.nav.pull-right
+                                        li.active: a(href='#') Accueil
+                                        li: a(href='#') ITE
+                                        li: a(href='#') Produits
+                                        li: a(href='#') Références
+                                        li: a(href='#') Contact
                     div#links
-                        br
-                        ul.nav.nav-pills
-                            li.active: a(href='#') Accueil
-                            li: a(href='#') ITE
-                            li: a(href='#') Produits
-                            li: a(href='#') Références
-                            li: a(href='#') Contact
-            hr
+                        span.link.selected Accueil
+                        span.link ITE
+                        span.link Produits
+                        span.link Références
+                        span.link Contact
+            br
+            div.row
+                div.span10.offset1
+                    h1 blabla
+                    p blabl bnla ohz
+                    hr
             footer 
                 p &copy; Isoldry 2012

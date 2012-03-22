@@ -6,6 +6,13 @@ footer {
     text-align: center;
 }
 
+h1 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: normal;
+    font-size: 35px;
+    color: #616166;
+}
+
 #main{
     background-color: #FFFFFF;
 }
@@ -14,9 +21,14 @@ footer {
     width: 160px;
 }
 
+#logo-div {
+    background-color: #6a9cdf;
+}
+
 #banniere{
-    background-color: #FFFDCF;
+    background-color: #6a9cdf;
     text-align: right;
+    margin-bottom: 5px;
 }
 
 #banniere-img{
@@ -24,9 +36,32 @@ footer {
 }
 
 #links {
-    text-align: right;
+    /*background-color: #d7d6bb;*/
+    background-color: #616166;
+    padding-right:20px;
+    padding-top:18px;
+    padding-bottom:14px;
+    margin-top:-5px;
+    text-align:right;
 }
 
-#link {
+.link {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 24px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: 4px;
+    margin-left: 4px;
+    color: #FFFFFF
+}
 
+.selected {
+    background-color:#aec6a3;
+    color: #616166;
+}
+
+.active {
+/*    background-color: #6a9cdf;*/
 }

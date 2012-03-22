@@ -15,7 +15,7 @@ switch_content = function(link) {
 }
 
 $(document).ready(function() {
-    $('#main').corner("tl tr bl br 20px");
+    /*$('#main').corner("tl tr bl br 20px");
     $('#news').corner("tl br 20px");
 
 	$('.selected_link').click( function() {
@@ -24,4 +24,7 @@ $(document).ready(function() {
 	$('.link').click( function() {
 		switch_content($(this));		
 	});
+  */
+    $('#links').corner("bl  20px");
+    $('.link').corner("bl br tl tr 4px");
 });
