@@ -2,6 +2,11 @@ body {
     background-image: url("../img/texture.png"); 
 }
 
+a, a.visited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 footer {
     text-align: center;
 }
@@ -15,6 +20,9 @@ h1 {
 
 #main{
     background-color: #FFFFFF;
+    box-shadow: 5px 5px 15px #555;
+    -moz-box-shadow: 5px 5px 15px #555;
+    -webkit-box-shadow: 3px 3px 15px #555;
 }
 
 #logo-img{
@@ -57,11 +65,11 @@ h1 {
     color: #FFFFFF
 }
 
-.selected {
-    background-color:#aec6a3;
+.selected_link {
+    background-color:#97ab8e;
     color: #616166;
 }
 
-.active {
-/*    background-color: #6a9cdf;*/
+.invisible_content {
+    display: none;
 }

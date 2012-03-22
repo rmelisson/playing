@@ -28,16 +28,45 @@ html(lang="fr")
                                         li: a(href='#') Références
                                         li: a(href='#') Contact
                     div#links
-                        span.link.selected Accueil
-                        span.link ITE
-                        span.link Produits
-                        span.link Références
-                        span.link Contact
+                        span.link.selected_link#link_accueil: a(href='#') Accueil
+                        span.link#link_ite: a(href='#') ITE
+                        span.link#link_produits: a(href='#') Produits
+                        span.link#link_references: a(href='#') Références
+                        span.link#link_contact: a(href='#') Contact
+            br
+            br
             br
             div.row
-                div.span10.offset1
-                    h1 blabla
-                    p blabl bnla ohz
+                div.span10.offset1#accueil
+                    h1 Bienvenue !
                     hr
+                    p 
+                        |Vous êtes bien sur le site d'Isoldry... boa
+                        |eifugf zefgizeufgi oiahz oiahzd
+                        |opiaz pazz pa  poj apoj  poapoj apoj.
+                    p et voilà!
+                    hr
+                div.span10.offset1.invisible_content#ite
+                    h1 L'isolation thermique par l'extérieur
+                    hr
+                    p bla ola ohazoi oi a
+                    hr
+                div.span10.offset1.invisible_content#produits
+                    h1 Nos produits
+                    hr
+                    p bla ola ohazoi oi a
+                    hr
+                div.span10.offset1.invisible_content#references
+                    h1 Nos références
+                    hr
+                    img(src="http://placehold.it/750x400")
+                    hr
+                div.span10.offset1.invisible_content#contact
+                    h1 Pour nous contacter
+                    hr
+                    p Contact commercial : amaury.marandin@isoldry.com <br /> <br />Port Fluvial 2ème Ave 8ème Rue <br /> 59000 LILLE <br />
+                    p <iframe width="600" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.fr/maps?f=q&source=s_q&hl=fr&geocode=&q=8%C3%A8me+Rue,+Lille&aq=0&oq=8%C3%A8me&sll=50.62751,3.029931&sspn=0.008358,0.01929&vpsrc=0&ie=UTF8&hq=&hnear=8%C3%A8me+Rue,+59000+Lille,+Nord,+Nord-Pas-de-Calais&ll=50.62751,3.029931&spn=0.008358,0.01929&t=m&z=14&output=embed"></iframe><br /><small><a href="http://maps.google.fr/maps?f=q&source=embed&hl=fr&geocode=&q=8%C3%A8me+Rue,+Lille&aq=0&oq=8%C3%A8me&sll=50.62751,3.029931&sspn=0.008358,0.01929&vpsrc=0&ie=UTF8&hq=&hnear=8%C3%A8me+Rue,+59000+Lille,+Nord,+Nord-Pas-de-Calais&ll=50.62751,3.029931&spn=0.008358,0.01929&t=m&z=14" style="color:#0000FF;text-align:left" target="_blank">Agrandir le plan</a></small>
+                    hr
+
             footer 
                 p &copy; Isoldry 2012
