@@ -1,3 +1,4 @@
 .npm/
 jquery*
 node_modules/
+.bin/
