@@ -1,3 +1,3 @@
 $(document).ready(function() {
-//    $('#main').corner("tl tr bl br 20px");
+    $('#main').corner("br tl tr bl 6px");
 });

@@ -2,9 +2,11 @@ body {
 	font-size: 20px;
     color: #616166;
 	font-family: "Inika", "Arial", "Helvetica", sans-serif;
-    background-image:url('../img/back.jpg');
+    background-image:url('../img/back-big2.jpg') ;
     background-repeat:no-repeat;
-    background-color:#d7d6bb;
+    background-position:center top;
+    #background-color:#d7d6bb;
+    background-color:#616166;
 }
 /*
 #background {
@@ -23,11 +25,12 @@ body {
 	margin-right: auto;
 	margin-top: 70px;
 	padding: 30px;
-    width: 560px;
+    width: 570px;
 }
 
 #logo {
     width: 160px;
+	border: solid 2px #616166;
 }
 
 #left {
@@ -36,7 +39,7 @@ body {
 
 #right {
 	margin-top: 15px;
-	margin-left: 10px;
+	margin-left: 16px;
     width: 390px;
     display: inline-block;
     vertical-align: top;
