@@ -1,8 +1,7 @@
 body {
 	color: #666764;  
 	background: #ECECEC;
-	/*background-image:url(../img/points.jpg);
-	margin-top: 1em;*/
+	background-image:url(../img/points.jpg);
 	font-family: "Noticia Text", "Arial", "Helvetica", sans-serif;
 	font-size:16px;
 }
@@ -77,7 +76,14 @@ a:hover {
 }
 
 #welcome {
-	margin-top : 8px;
+	margin-top: 8px;
+}
+p.alinea {
+    text-indent: 35px;
+}
+
+#home {
+    text-align: justify;
 }
 
 #me_img {
@@ -119,12 +125,17 @@ a:hover {
 	margin-left: auto; 
 	margin-right: auto;
 	padding: 30px;
-	/*text-align:justify;*/
+	padding-left: 60px;
+	padding-right: 60px;
     width: 560px;
 }
 
 .invisible_content {
 	display : none;
+}
+
+#work {
+	text-align:justify;
 }
 
 #contact {
@@ -162,7 +173,6 @@ h2 {
 	margin-bottom : 5px;
 	font-size : 22px;
 }
-
 
 .hash3{
 	font-weight : bold;
