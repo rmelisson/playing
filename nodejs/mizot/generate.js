@@ -1,12 +1,12 @@
 var fs = require('fs');
 var jade = require('jade');
 var util = require('util');
-var sys = require('sys')
+var util = require('util')
 var exec = require('child_process').exec;
 
 var root_dir = '/tmp/mizot';
 
-function puts(error, stdout, stderr) { sys.puts(stdout) }
+function puts(error, stdout, stderr) { util.puts(stdout) }
 
 jade.renderFile('./views/layout.jade', function(err, html) {
 	if (err) {
