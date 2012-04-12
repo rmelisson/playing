@@ -178,7 +178,7 @@ h2 {
 	font-weight : bold;
 	color : #942222;
 	font-size : 20px;
-	padding-right : 16px;
+	padding-right : 10px;
 	font-family:"Josefin Sans", "Arial";
 }
 
@@ -186,8 +186,18 @@ h2 {
 	font-size : 16px;
 }
 
+.cv_line a {
+  border-bottom: 1px dotted;
+}
+
 .cv_uline {
-	font-size : 12px;
+	font-size : 13px;
+  color : grey;
+}
+
+.cv_uline a {
+  border-bottom: 1px dotted;
+  color : grey;
 }
 
 .small {
