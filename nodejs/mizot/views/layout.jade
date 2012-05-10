@@ -11,12 +11,12 @@ html(lang="en")
         script(src="javascript/jquery.corner.js")
         script(src="javascript/mizot.js")
     body
-        div#top Remi Melisson, software developer
+        div#top Remi Melisson, software engineer
         div#nav 
           span.selected_link.link#link_home: a(href='#') Home
-          span.link#link_work: a(href='#') Activity
           span.link#link_contact: a(href='#') Contact
           span.link#link_resume: a(href='#') Bio
+          span.link#link_work: a(href='#') Activity
         div.content#home
           div#img_div
               img#me_img(src="img/id.jpg")
@@ -43,14 +43,15 @@ html(lang="en")
             <a href="http://www.twitter.com/rmelisson" target="_blank"><img src="https://si0.twimg.com/a/1334246584/images/logos/twitter_newbird_boxed_whiteonblue.png" style="width:55px;" alt="Follow rmelisson on Twitter"/></a>
 
         div.content.invisible_content#resume 
-            //- Download my resume :
-                div#download
-                    a(href='/', 'french resume') FR
-                    \ / 
-                    a(href='/', 'english resume') EN
-              br
-              hr
-              br
+            span.center Download my resume :&nbsp;&nbsp;
+                  a(href='/', 'french resume') FR
+                  \ / 
+                  a(href='/', 'english resume') EN
+            br
+            hr
+            br
+            h2.center Professional Experience
+            br
             span.hash3 Since 2011
             span.cv_line 
               |Research Engineer and Ph.D. student, 
@@ -67,14 +68,7 @@ html(lang="en")
             br
             span.cv_uline Contribute to the FOSS 
               a(href="http://frascati.ow2.org", target="_blank") FraSCAti platform 
-              | - Android, OSGi, Maven, Java, SOA, CBSE
-            br
-            br
-            span.hash3 2009
-            span.cv_line Master of Science, University of Lille
-            br
-            span.cv_uline Software Engineering and Architecture - 
-              a(href="http://fil.univ-lille1.fr/master-informatique/iagl/", target="_blank") Ingenierie et architecture logicielle
+              | - Android, xText, EMF, OSGi, Maven, Java
             br
             br
             span.hash3 2009
@@ -92,20 +86,82 @@ html(lang="en")
             span.cv_uline Parallel Programming on GPU - ASM, C, C++, CUDA
             br
             br
+            h3.center Education
+            br
+            span.hash3 2009
+            span.cv_line Master of Science, University of Lille
+            br
+            span.cv_uline Software Engineering and Architecture - 
+              a(href="http://fil.univ-lille1.fr/master-informatique/iagl/", target="_blank") Ingenierie et architecture logicielle
+            br
+            br
+            span.hash3 2007
+            span.cv_line Bachelor of Science, University of Lille
+            br
+            span.cv_uline Computer Science
+            br
+            br
+            hr
+            br
+            h3.center Software Engineering
+            br
+            span.hash3 Langages
+            span.cv_uline I'm mainly using Java and Python, but I experienced a bunch of different langages (from C to Haskell...) and I would definitly choose the adapted one rather than my favorite. I'm curently interested by Scala and I would be glad to go deeper into it.
+            br
+            br
+            span.hash3 Tools & Frameworks
+            span.cv_uline My favourites are Vim, Git, Maven, IntelliJ IDE. I appreciated usage of Sonar, OSGi, Spring, Hibernate, .Net, xText, RoR, Android SDK. It would be a pleasure to go deeper into Hadoop and Mahout, noSQL databases, nodeJS or other scalability enablers.
+            br
+            br
+            span.hash3 Engineering
+            span.cv_uline I'm familiar with OOP concept, Service Oriented Architectures, SOLID principles and Uncle Bob advices. Even if I never experienced it in a real life context, agile movement appears to be the solution for driving project and I hope to be able to continually deploy my next software project with the help of a devops enable team. Finally, Cloud computing and Big data are both buzz words and really interested feeds, but they are mainly exciting enginnering topics.
+            br
 
         div.content.invisible_content#work
-            span Some of the projects I have been involved in the past three years :
+            span Some details about projects I have been involved in the past three years, both personally and in my jobs :
             h3 virtual STB
             p.small I'm currently working on my Ph.D. study, which aims to propose an End2End architecture for virtualize the Orange Set Top Box into the operator infrastructure. 3 goals have been identified : deliver STB services to every home devices with rendering capabilities; move STB functions to operator infrastructure in a scalable and adaptable way; provide proxies for OTT (Over The Top : Google, Facebook...) services into the LAN across home networks standards.
             h3 Facil
-            p.small Facil is a web site which allow Colombian citizens to access to administrative documents in order to let them trigger jsutice action without the need of a lawer. It is a Ruby on Rails application which will be available in a few months.
+            p.small Facil is a web application that enable access for Colombian citizens to administrative documents in order to let them trigger justice action without the need of a lawer. It is a 
+              span.tech Ruby on Rails
+              |  application, deployed on 
+              span.tech Heroku
+              |  which will be available in a few months.
             h3 Mundle
-            p.small Mundle is a tool which provide a way for dynamically convert maven artifact into OSGi bundles at runtime. Based on bnd and Maven 3 API, it allows to benefit from the Maven dependency description in order to deploy Maven artifact as bundles. This tool should facilitate the migration of standard Maven based Java project onto OSGi platforms.
+            p.small Mundle is a tool which provide a way for dynamically convert 
+              span.tech Maven
+              |  artifact into 
+              span.tech OSGi
+              |  bundles at runtime. Based on bnd and Maven 3 API, it allows to benefit from the Maven dependency description in order to deploy Maven artifacts as bundles. This tool should facilitate the migration of standard Maven based Java project onto OSGi platforms.
             h3 FraSCAti on OSGi
-            p.small FraSCAti is a Java implementation of the Service Component Architecture (SCA) standard. It relies on the Fracal component model in order to allow dynamic reconfiguration on SCA based software. I am working on a merge between SCA and OSGi concept which could clarify the different responsibilities of those specifications.
+            p.small FraSCAti is a 
+              span.tech Java
+              |  implementation of the Service Component Architecture
+              span.tech SCA
+              |  standard. It relies on the Fracal component model in order to allow dynamic reconfiguration on SCA based software. I was working on a merge between SCA and OSGi concept which could clarify the different responsibilities of those specifications.
             h3 Binjiu
-            p.small Binjiu is a set of facility for using UPnP protocol in order to achieve remote calls within Java distributed applications. Building on top of CyberLink for Java (which is a java implementation of UPnP protocol), it supplies the discovery benefits of UPnP to service oriented Java software.
+            p.small Binjiu is a set of facility for using 
+              span.tech UPnP
+              |  protocol in order to achieve remote calls within
+              span.tech Java
+              |  distributed applications. Building on top of CyberLink for Java (which is a java implementation of UPnP protocol), it supplies the discovery benefits of UPnP to service oriented Java software. It was before Cling, which is now the best UPnP tool for Java.
             h3 MIND Project
-            p.small MIND is a project which depend on the Minalogic global competitive cluster. This project aims to provide a model and a valid infrastructure for developing lightweight (as well as dramatically lightweight) embedded software according to component based software engineering paradigms. More precisely, we are taking part in the development of an IDE (textual and graphical integrated editors) for component architecture definition. To achieve those goals, we are using the Fractal component model and the Eclipse Modeling Framework (EMF, GMF, TMF-Xtext).
+            p.small This project aims to provide a model and a valid infrastructure for developing lightweight (as well as dramatically lightweight) embedded software according to component based software engineering paradigms. More precisely, we are taking part in the development of an IDE (textual and graphical integrated editors) for component architecture definition. Using Eclipse Modeling Framework 
+              span.tech EMF
+              | , I worked on a domain specific langage 
+              span.tech DSL
+              |  and its corresponding textual editor thanks to 
+              span.tech xText
+              | .
             h3 Pass GRL
-            p.small blabl blalba ala oazh aoh apzahja pa pojafp apa oja
+            p.small A case in point of a standard serious web-based application build upon the 
+              span.tech .Net
+              |  ecosystem. Using 
+              span.tech NHibernate
+              | 
+              span.tech Spring.NET
+              | 
+              span.tech Oracle DB
+              | 
+              span.tech jQuery
+              |  in a well-decoupled architecture, it was my first experience of a real-world application. I was in charge of maintaining it, and make it evolve according to client needings.

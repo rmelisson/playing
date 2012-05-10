@@ -149,11 +149,18 @@ h3 {
 }
 
 h2 {
+  color : #942222;
   font-weight : bold;
-  color : #036564;
+  font-family:"Josefin Sans", "Arial";
   margin-top : 10px;
   margin-bottom : 5px;
   font-size : 22px;
+}
+
+.tech {
+    background-color: #DCDCDC;
+    padding-left : 2px;
+    padding-right : 2px;
 }
 
 .hash3{
@@ -192,4 +199,7 @@ ul {
   padding : 5px;
   list-style-image:none;
   list-style:none;
+}
+.center {
+    text-align : center;
 }
