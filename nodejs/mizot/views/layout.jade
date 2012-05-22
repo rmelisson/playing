@@ -24,7 +24,7 @@ html(lang="en")
           div#welcome <span class="capital">W</span>elcome here, I'm Remi Melisson, enthusiast developer. I'm currently located in France but I plan to move to London during the 2012 summer.
           br
           p.alinea I like great code (i.e. clean, elegant, well-tested, efficient, SOLID…) and I'm looking for a position where code quality matters. I'm passionate by my work and I pay attention to the software community. During the past years, I was involved in the research area where I learned to stand back and look ahead. 
-          p.alinea I would like to join an enthusiast team, using adapted technologies in order to solve problems, challenges. Currently, I'm especially interested by scalable needs, for example in the scope of big data.
+          p.alinea I would like to join an enthusiast team, using adapted technologies in order to solve problems, challenges. Currently, I'm especially interested by scalable needs, for example in the scope of big data or cloud computing. But any field where performance matters might motivate me.
           p.alinea Here you can find information about my background and my early career. Feel free to contact me via email, Linked In or why not, smoke signals. 
         div.content.invisible_content#contact Well, you can find me <a href="http://maps.google.fr/maps/place?q=Orange+R%26D+Meylan&hl=en&cid=8451382217444420832" target="_blank">there</a> : <br /><br />
             span#liam
@@ -86,6 +86,12 @@ html(lang="en")
             span.cv_uline Parallel Programming on GPU - ASM, C, C++, CUDA
             br
             br
+            span.hash3 2004-09
+            span.cv_line Waiter, delivery man, summer camp supervisor (and trainer for supervisor), maths teacher 
+            br
+            span.cv_uline Where I have learnt to work with all kinds of people and to develop my teamwork skills under different context
+            br
+            br
             h3.center Education
             br
             span.hash3 2009
@@ -114,13 +120,28 @@ html(lang="en")
             br
             br
             span.hash3 Engineering
-            span.cv_uline I'm familiar with OOP concept, Service Oriented Architectures, SOLID principles and Uncle Bob advices. Even if I never experienced it in a real life context, agile movement appears to be the solution for driving project and I hope to be able to continually deploy my next software project with the help of a devops enable team. Finally, Cloud computing and Big data are both buzz words and really interested feeds, but they are mainly exciting enginnering topics.
+            span.cv_uline I'm familiar with OOP concept, Service Oriented Architectures, SOLID principles and Uncle Bob advices. Even if I never experienced it in real life, agile movement appears to be the solution for driving project and I hope to be able to continually deploy my next software project with the help of a devops enable team. Finally, in my opinion Cloud computing and Big data are both buzz words and really interested feeds, but they are mainly exciting enginnering topics.
             br
 
         div.content.invisible_content#work
-            span Some details about projects I have been involved in the past three years, both personally and in my jobs :
+            span Some details about different projects I have been involved in the past three years, both personally and in my jobs :
             h3 virtual STB
-            p.small I'm currently working on my Ph.D. study, which aims to propose an End2End architecture for virtualize the Orange Set Top Box into the operator infrastructure. 3 goals have been identified : deliver STB services to every home devices with rendering capabilities; move STB functions to operator infrastructure in a scalable and adaptable way; provide proxies for OTT (Over The Top : Google, Facebook...) services into the LAN across home networks standards.
+            p.small In Orange R&D, I am working on a solution which aims to deliver the Set Top Box services (IPTV : Catch-up TV, VoD, EPG, time shifting...) without the need for a hardware located into the client network. Objectives are to increase the flexibility and adaptability of the software stack (avoid hardware management), to deliver services to different kinds of device (smartphones, tablets, connected TV and PC, against only TV for the current solution) and to integrate OTT services in addition to the standard IPTV functions (e.g. YouTube, Facebook...).
+              br
+              br
+              | Our 
+              span.tech scalable
+              |  prototype is written in 
+              span.tech Java
+              | , using 
+              span.tech HTML5
+              |  video and 
+              span.tech CSS3 Media Queries
+              | , we designed an
+              span.tech API
+              |  and allow deployment of standard 
+              span.tech DLNA
+              |  services into the WAN.
             h3 Facil
             p.small Facil is a web application that enable access for Colombian citizens to administrative documents in order to let them trigger justice action without the need of a lawer. It is a 
               span.tech Ruby on Rails
