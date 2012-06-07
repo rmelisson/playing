@@ -10,7 +10,8 @@ import java.util.ArrayList;
 public class Qubit {
 
     public static String data1 = "/Users/remim/Documents/qubit/data1";
-    public static String data4 = "/Users/remim/Documents/qubit/data4";
+    //public static String data4 = "/Users/remim/Documents/qubit/data4";
+    public static String data4 = "/home/saul/Downloads/qubi/data4";
 
     public static void main (String[] args) throws IOException {
 
@@ -21,12 +22,14 @@ public class Qubit {
         //System.out.println(set[0]);
         //System.out.println(getMaxLen(set, n));
 
-        long l = 1131016214110;
-        BigInteger n1 = BigInteger.valueOf(1131016214110);
+        //long l = 1131016214110;
+        //BigInteger n1 = BigInteger.valueOf(1131016214110);
 
         //verifyCode1(data4);
 
         //assertBinary(root);
+
+        soWhat();
 
                         /*
         for (int i=0; i<50; i++){
@@ -34,6 +37,58 @@ public class Qubit {
         }                 */
         return;
     }
+
+    public static void soWhat(){
+        String line =  "0.86773414468182696879239301779307425113101621411075:0.13226585531817303120760698220692574931101930403025";
+        /*
+        0.86773414468182696879239301779307425113101621411075
+        0.13226585531817303120760698220692574931101930403025
+        */
+
+        long l2 = 931101930403L;
+        long l1 = 113101621411L;
+
+        primeDecomp(l1);
+        primeDecomp(l2);
+    }
+
+    public static void primeDecomp(long n){
+
+        // for each potential factor i
+        for (long i = 2; i*i <= n; i++) {
+
+            // if i is a factor of N, repeatedly divide it out
+            while (n % i == 0) {
+                System.out.print(i + " ");
+                n = n / i;
+            }
+        }
+
+        // if biggest factor occurs only once, n > 1
+        if (n > 1) System.out.println(n);
+        else       System.out.println();
+    }
+
+    public static long GCD(long a, long b)
+    {
+        if (b==0) return a;
+        return GCD(b,a%b);
+    }
+
+    public static boolean isPrime(long n) {
+        boolean prime = true;
+        for (long i = 3; i <= Math.sqrt(n); i += 2)
+            if (n % i == 0) {
+                prime = false;
+                break;
+            }
+        if (( n%2 !=0 && prime && n > 2) || n == 2) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
     public static void exp(String filePath, int max) throws IOException {
 
