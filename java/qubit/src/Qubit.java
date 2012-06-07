@@ -1,4 +1,5 @@
 import java.io.*;
+import java.math.BigInteger;
 import java.util.ArrayList;
 
 /**
@@ -14,11 +15,16 @@ public class Qubit {
     public static void main (String[] args) throws IOException {
 
         int n = 1000;
-        String[] set = constructDataSet(n,10,data1);
-        TreeNode root = createTree(set, n);
-        printTree(root, 0);
+        //String[] set = constructDataSet(n,10,data1);
+        //TreeNode root = createTree(set, n);
+        //printTree(root, 0);
         //System.out.println(set[0]);
         //System.out.println(getMaxLen(set, n));
+
+        long l = 1131016214110;
+        BigInteger n1 = BigInteger.valueOf(1131016214110);
+
+        //verifyCode1(data4);
 
         //assertBinary(root);
 
@@ -197,5 +203,88 @@ public class Qubit {
         return max;
     }
 
+
+    public static void verifyCode1(String filePath) throws IOException {
+        File f = new File(filePath);
+        FileInputStream fis = new FileInputStream(f);
+        BufferedReader bf = new BufferedReader(new InputStreamReader(fis));
+
+        char[] code1 = new char[10];
+        code1[0] = '9';
+        code1[1] = '8';
+        code1[2] = '7';
+        code1[3] = '6';
+        code1[4] = '5';
+        code1[5] = '4';
+        code1[6] = '3';
+        code1[7] = '2';
+        code1[8] = '1';
+        code1[9] = '0';
+
+        String line;
+        String separator = ":";
+        String[] cut;
+        long i = 1;
+        int lengthElement;
+        int lengthEnd;
+        String end;
+        String s0, s1;
+
+        while (true) {
+
+            line = bf.readLine();
+
+            if (line == null){
+                System.out.println("ok!");
+                return;
+            }
+
+            cut = line.split(separator);
+
+            s0 = cut[0].substring(2, cut[0].length()-1);
+            s1 = cut[1].substring(2, cut[1].length() - 1);
+
+
+            /*if (! respectCode1(s0, s1, code1)){
+                System.out.println("Error : " + i);
+                System.out.println(line);
+                //return;
+            } */
+
+            if (s0.endsWith("7")){
+                String subs = s0.substring(0, s0.length()-1);
+                if ( ! (subs.endsWith("18") ||
+                        subs.endsWith("68") ||
+                        subs.endsWith("93") ||
+                        subs.endsWith("43") ) ){
+                    System.out.println("Error : " + i);
+                    System.out.println(line);
+                }
+            }
+
+            i++;
+
+            //return;
+        }
+
+    }
+
+
+    public static boolean respectCode1(String s0, String s1,  char[] code1){
+        int length = s1.length();
+        if (s0.length() != length){
+            return false;
+        }
+        StringBuilder sNew = new StringBuilder(length);
+        char c;
+        int j;
+        for (int i=0; i<length; i++){
+            c = s0.charAt(i);
+            j = Integer.parseInt(String.valueOf(c));
+            sNew.append(code1[j]);
+        }
+
+        return (sNew.toString().compareTo(s1) == 0);
+    }
 
 }
