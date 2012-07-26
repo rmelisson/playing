@@ -8,13 +8,6 @@ body {
     #background-color:#d7d6bb;
     background-color:#616166;
 }
-/*
-#background {
-	margin-left: auto; 
-	margin-right: auto;
-    background-image:url('../img/back.jpg');
-    background-repeat:no-repeat;
-}*/
 
 #main {
 	box-shadow: 5px 5px 15px #555;
@@ -25,23 +18,24 @@ body {
 	margin-right: auto;
 	margin-top: 70px;
 	padding: 30px;
-    width: 570px;
+	padding-top: 15px;
+  width: 570px;
 }
 
 #logo {
-    width: 160px;
+  width: 160px;
 	border: solid 2px #616166;
 }
 
 #left {
-    display: inline-block;
+	margin-top: 30px;
+  display: inline-block;
 }
 
 #right {
-	margin-top: 15px;
 	margin-left: 16px;
-    width: 390px;
-    display: inline-block;
-    vertical-align: top;
-    text-align: center;
+  width: 390px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
 }
