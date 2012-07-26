@@ -45,12 +45,39 @@ public class Qubit {
         0.13226585531817303120760698220692574931101930403025
         */
 
-        long l2 = 931101930403L;
-        long l1 = 113101621411L;
+        BigInteger i = new BigInteger("86773414468182696879239301779307425113101621411075");
+        BigInteger j = new BigInteger("13226585531817303120760698220692574931101930403025");
 
-        primeDecomp(l1);
-        primeDecomp(l2);
-    }
+        BigInteger[] k = i.divideAndRemainder(j);
+        System.out.println(i.subtract(j));
+
+        //01234
+        //98765
+
+        long l1 = 1131016214110L;
+
+        // l1 + code1
+        long l3 = 8868983785889L;
+
+        // l2 + code2
+        //01234
+        //56789
+        long l4 = 4866564859585L;
+
+
+        long l2 = 9311019304030L;
+
+        /*primeDecomp(l3);
+        System.out.println(GCD(l1, l3));
+//        primeDecomp(l2);
+
+        System.out.println(Long.toString(l2,5));
+
+        System.out.println(Long.toBinaryString(l2));
+        System.out.println(Long.toBinaryString(l3));
+        System.out.println(l3>>1);            */
+
+   }
 
     public static void primeDecomp(long n){
 
