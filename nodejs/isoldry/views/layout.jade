@@ -2,9 +2,12 @@
 html(lang="fr")
     head
         title isoldry
-        script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js")
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        //script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js")
+        script(src="http://code.jquery.com/jquery-latest.min.js")
         //script(src="javascript/jquery.min.js")
         script(src="javascript/jquery.corner.js")
+        script(src="javascript/slides.min.jquery.js")
         script(src="javascript/isoldry.js")
         link(href="img/logo-ico.png", rel="shortcut icon")
         link(href="style/bootstrap/css/bootstrap.min.css", type="text/css", rel="stylesheet")
@@ -53,21 +56,10 @@ html(lang="fr")
                     p bla ola ohazoi oi a
                     hr
                 div.span10.offset1.invisible_content#produits
-                    h1 Nos produits
-                    hr
-                    p bla ola ohazoi oi a
-                    hr
+                    include includes/produits
                 div.span10.offset1.invisible_content#references
-                    h1 Nos références
-                    hr
-                    img(src="http://placehold.it/750x400")
-                    hr
+                    include includes/references
                 div.span10.offset1.invisible_content#contact
-                    h1 Pour nous contacter
-                    hr
-                    p Contact commercial : commercial@isoldry.com <br /> <br />Port Fluvial 2ème Ave 8ème Rue <br /> 59000 LILLE <br />
-                    p#map 
-                    hr
-
+                    include includes/contact
             footer 
                 p &copy; Isoldry 2012

@@ -1,75 +1,266 @@
 body {
-    background-image: url("../img/texture.png"); 
+  background-image: url("../img/texture.png"); 
 }
 
 a, a.visited {
-    color: #FFFFFF;
-    text-decoration: none;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 footer {
-    text-align: center;
+  text-align: center;
 }
 
 h1 {
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-weight: normal;
-    font-size: 35px;
-    color: #616166;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: normal;
+  font-size: 35px;
+  color: #616166;
+}
+p {
+  font-size: 16px;
 }
 
 #main{
-    background-color: #FFFFFF;
-    box-shadow: 5px 5px 15px #555;
-    -moz-box-shadow: 5px 5px 15px #555;
-    -webkit-box-shadow: 3px 3px 15px #555;
+  background-color: #FFFFFF;
+  box-shadow: 5px 5px 15px #555;
+  -moz-box-shadow: 5px 5px 15px #555;
+  -webkit-box-shadow: 3px 3px 15px #555;
+  font-size: 16px;
 }
 
 #logo-img{
-    width: 160px;
+  width: 160px;
 }
 
 #logo-div {
-    background-color: #6a9cdf;
+  background-color: #6a9cdf;
 }
 
 #banniere{
-    background-color: #6a9cdf;
-    text-align: right;
-    margin-bottom: 5px;
+  background-color: #6a9cdf;
+  text-align: right;
+  margin-bottom: 5px;
 }
 
 #banniere-img{
-    height: 150px;
+  height: 150px;
 }
 
 #links {
-    /*background-color: #d7d6bb;*/
-    background-color: #616166;
-    padding-right:20px;
-    padding-top:18px;
-    padding-bottom:14px;
-    margin-top:-5px;
-    text-align:right;
+  /*background-color: #d7d6bb;*/
+  background-color: #616166;
+  padding-right:20px;
+  padding-top:18px;
+  padding-bottom:14px;
+  margin-top:-5px;
+  text-align:right;
 }
 
 .link {
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 24px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 12px;
-    padding-right: 12px;
-    margin-right: 4px;
-    margin-left: 4px;
-    color: #FFFFFF
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 24px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-right: 4px;
+  margin-left: 4px;
+  color: #FFFFFF
 }
 
 .selected_link {
-    background-color:#97ab8e;
-    color: #616166;
+  background-color:#97ab8e;
+  color: #616166;
 }
 
 .invisible_content {
-    display: none;
+  display: none;
 }
+
+
+
+
+
+
+/*
+  References
+*/
+
+#container {
+  width:580px;
+  padding:10px;
+  margin:0 auto;
+  position:relative;
+  z-index:0;
+}
+
+#example {
+  width:600px;
+  height:350px;
+  position:relative;
+}
+
+#frame {
+  position:absolute;
+  z-index:0;
+  width:739px;
+  height:341px;
+  top:-3px;
+  left:-80px;
+}
+
+/*
+ *  Slideshow
+ *  */
+
+#slides {
+  position:absolute;
+  top:15px;
+  left:4px;
+  z-index:100;
+}
+
+/*
+ *  Slides container
+ *    Important:
+ *      Set the width of your slides container
+ *        Set to display none, prevents content flash
+ *        */
+
+.slides_container {
+  width:570px;
+  overflow:hidden;
+  position:relative;
+  display:none;
+}
+
+/*
+ *  Each slide
+*    Important:
+*      Set the width of your slides
+*        If height not specified height will be set by the slide content
+*          Set to display block
+*          */
+
+.slides_container a {
+  width:570px;
+  height:270px;
+  display:block;
+}
+.slides_container div {
+  width:570px;
+  height:270px;
+  display:block;
+}
+
+.slides_container a img {
+  display:block;
+}
+
+/*
+*  Next/prev buttons
+*  */
+
+#slides .next,#slides .prev {
+  position:absolute;
+  top:107px;
+  left:-39px;
+  width:24px;
+  height:43px;
+  display:block;
+  z-index:101;
+}
+
+#slides .next {
+  left:585px;
+}
+
+/*
+*  Pagination
+*  */
+/*
+.pagination {
+  margin:26px auto 0;
+  width:100px;
+}
+
+.pagination li {
+  float:left;
+  margin:0 1px;
+  list-style:none;
+}
+
+.pagination li a {
+  display:block;
+  width:12px;
+  height:0;
+  padding-top:12px;
+  background-image:url(../img/pagination.png);
+  background-position:0 0;
+  float:left;
+  overflow:hidden;
+}
+
+.pagination li.current a {
+  background-position:0 -12px;
+}
+*/
+
+/*
+  
+.slides_container {
+  width:667px;
+  height:400px;
+}
+.slides_container div {
+  width:667px;
+  height:370px;
+  display:block;
+}*/
+.caption {
+    z-index:500;
+    position:absolute;
+    bottom:-365px;
+    left:0;
+    height:10px;
+    padding:10px 20px 0 20px;
+    background:#000;
+    background:rgba(0,0,0,.5);
+    width:267px;
+    font-size:1.3em;
+    line-height:1.33;
+    color:#fff;
+    border-top:1px solid #000;
+    text-shadow:none;
+    text-align:left;
+}
+/*
+.pagination {
+    margin:26px auto 0;
+      width:100px;
+    }
+
+    .pagination li {
+        float:left;
+          margin:0 1px;
+            list-style:none;
+          }
+
+          .pagination li a {
+              display:block;
+                width:12px;
+                  height:0;
+                    padding-top:12px;
+                      background-image:url(../img/pagination.png);
+                        background-position:0 0;
+                          float:left;
+                            overflow:hidden;
+                          }
+
+                          .pagination li.current a {
+                              background-position:0 -12px;
+                            }
+
+
+*/
