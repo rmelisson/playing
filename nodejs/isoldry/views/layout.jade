@@ -1,18 +1,32 @@
 !!! 5
 html(lang="fr")
     head
-        title isoldry
+        title Isoldry, entreprise : Isolation thermique par l'extérieur (ITE), systèmes de revêtement de façade Dryvit - Lille, Nord Pas de Calais - ITE 59 - ITE 62 - devis isolation
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        //script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js")
-        script(src="http://code.jquery.com/jquery-latest.min.js")
-        //script(src="javascript/jquery.min.js")
+        script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js")
         script(src="javascript/jquery.corner.js")
-        script(src="javascript/slides.min.jquery.js")
+        script(src="javascript/jquery.nivo.slider.pack.js")
+        script(src="javascript/jquery-ui-1.8.23.custom.min.js")
         script(src="javascript/isoldry.js")
+        script
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-34562587-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+             })();
         link(href="img/logo-ico.png", rel="shortcut icon")
         link(href="style/bootstrap/css/bootstrap.min.css", type="text/css", rel="stylesheet")
         link(href="style/style2.css", type="text/css", rel="stylesheet")
+        link(href="style/nivo-slider.css", type="text/css", rel="stylesheet")
+        link(href="style/nivo-default-theme.css", type="text/css", rel="stylesheet")
+        link(href="style/jquery-ui-1.8.23.custom.css", type="text/css", rel="stylesheet")
         link(href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz", rel="stylesheet", type="text/css")
+        meta(name="keywords", content="ITE, isolation thermique par l'exterieur, lille, nord, pas-de-calais, dryvit, facade, peinture, finition, isolant, isoldry, entrepise, ITE 59, ITE 62, devis isolation")
+        meta(name="description", content="Isoldry, entreprise spécialisée dans l'isolation thermique par l'exterieur (ITE) et distributeur des sytèmes de revêtement de facade Dryvit. Basée à Lille, Nord Pas de Calais 59 62 ")
     body
         div.container#main
             div.row
@@ -20,7 +34,7 @@ html(lang="fr")
                     img#logo-img(src="img/logo.png")
                 div.span10
                     div#banniere
-                        img#banniere-img(src="img/banniere-bis.png")
+                        img#banniere-img(src="img/banniere.jpg")
                     //
                         div.navbar
                             div.navbar-inner
@@ -37,29 +51,26 @@ html(lang="fr")
                         span.link#link_produits: a(href='#') Produits
                         span.link#link_references: a(href='#') Références
                         span.link#link_contact: a(href='#') Contact
+                        span
+                          a(href="http://www.twitter.com/Isoldry", target="_blank")
+                            img.social(src="img/tw.png", height="28px"); 
+                        span
+                          a(href="http://www.facebook.com/Isoldry", target="_blank")
+                            img.social(src="img/f_logo.png", height="28px"); 
             br
             br
-            br
-            div.row
-                div.span10.offset1#accueil
-                    h1 Bienvenue !
-                    hr
-                    p 
-                        |Vous êtes bien sur le site d'Isoldry... boa
-                        |eifugf zefgizeufgi oiahz oiahzd
-                        |opiaz pazz pa  poj apoj  poapoj apoj.
-                    p et voilà!
-                    hr
-                div.span10.offset1.invisible_content#ite
-                    h1 L'isolation thermique par l'extérieur
-                    hr
-                    p bla ola ohazoi oi a
-                    hr
-                div.span10.offset1.invisible_content#produits
-                    include includes/produits
-                div.span10.offset1.invisible_content#references
-                    include includes/references
-                div.span10.offset1.invisible_content#contact
-                    include includes/contact
+            div.row#content
+              div.span10.offset1#accueil
+                include includes/accueil
+              div.span10.offset1.invisible_content#ite
+                include includes/ite
+              div.span10.offset1.invisible_content#produits
+                include includes/produits
+              div.span10.offset1.invisible_content#references
+                include includes/references
+              div.span10.offset1.invisible_content#contact
+                include includes/contact
             footer 
-                p &copy; Isoldry 2012
+              p &copy; Isoldry 2012
+              p.invisible_content ITE, isolation thermique par l'exterieur, lille, nord, pas-de-calais, dryvit, facade, peinture, finition, isolant, isoldry, entrepise, ITE 59, ITE 62, devis isolation
+        br
