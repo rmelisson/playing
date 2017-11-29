@@ -50,12 +50,12 @@ class GiftMixer:
         return
 
     def mail_start(self):
-        name_tmpl = Template('* $prenom $nom \"$surnom\"\n')
+        name_tmpl = Template('* $prenom $nom $surnom\n')
         names = ''
         for f in self.friends:
             names += name_tmpl.substitute(prenom = f.prenom, nom = f.nom, surnom = f.surnom)
 
-        txt_tmpl = Template("Yo yo $prenom $nom\nTu as l'immense chance de t'être selectionné(e) pour le gift mix 2011, une expérience bouleversante qui renversera (encore) ce noël.\nVoici la liste des amigos:\n\n$liste \nUn second mail te dévoilera l'identité de l'heureux élu à qui destiner ton cadeau!\ncya cya.\nGiftMixer Robot 1.11")
+        txt_tmpl = Template("Yo yo $prenom $nom\nTu as l'immense chance de t'être selectionné(e) pour le gift mix 2017, une expérience bouleversante qui renversera (encore) ce noël.\nVoici la liste des amigos:\n\n$liste \nUn second mail te dévoilera l'identité de l'heureux élu à qui destiner ton cadeau!\ncya cya.\nGiftMixer Robot 1.11")
         s = smtplib.SMTP('smtp.orange.fr')
         s.set_debuglevel(1)
         for f in self.friends:
@@ -73,7 +73,8 @@ class GiftMixer:
 
     def mail_gifter(self):
         txt_tmpl = Template("Yo, \nTon cadeau, c'est à $prenom $nom \"$surnom\" que tu dois l'envoyer! No rules, c'est toi qui vois.\ncya.\nGiftMixer Robot 1.11")
-        s = smtplib.SMTP('smtp.sfr.fr')
+        #s = smtplib.SMTP('smtp.sfr.fr')
+        s = smtplib.SMTP('smtp.orange.fr')
         s.set_debuglevel(1)
         for (f, r) in self.associations:
             msg = MIMEMultipart('alternative')
@@ -104,7 +105,7 @@ class GiftMixer:
             receivers.append(r)
         for p in l:
             assert p in senders
-            assert p in receivers  
+            assert p in receivers
         return True
 
 ####### SEQUENCE
@@ -164,12 +165,12 @@ def start_test():
     giftMixer.report()
     #giftMixer.mail()
 
-start_test()
+#start_test()
 
 ####### END TEST
 
 
-####### OUR lIST 
+####### OUR lIST
 
 def create_list():
     ben = Person('Benou', 'Donov', 'superman', 'benoit.dalinval@gmail.com')
@@ -199,25 +200,38 @@ def create_list():
     c = [ (adri, sarah), (dum, agathe), (franz, nath), (verv, lucie)]
     return [l, c]
 
-####### GE LIST 
+####### GE LIST
 def create_ge_list():
     agathe = Person('Agathe', '', '', 'vanweydeveldt.agathe@hotmail.fr')
     flo = Person('Florentin', '', '', 'florentinadamski@hotmail.fr')
     lorie = Person('Lorie', '', '', 'lo1126@hotmail.com')
-    valentin = Person('Valentin', '', '', 'valentin.adamski@gmail.com')        
+    valentin = Person('Valentin', '', '', 'valentin.adamski@gmail.com')
     germain = Person('Germain', '', '', 'dbleg.adamski@gmail.com')
     l = [agathe, flo, lorie, valentin, germain]
     return [l, []]
 
+def create_fr_list():
+    nico = Person('Nico', '', '', 'mr.humbert184@gmail.com')
+    mathilde = Person('Mathilde', '', '', 'mathilde.lhernould@gmail.com')
+    elodie_h = Person('Elodie H', '', '', 'el.humbert@hotmail.fr')
+    leandre = Person('Leandre', '', '', 'Leandrecapliez@live.fr')
+    caro = Person('Caro', '', '', 'carocat12@hotmail.com')
+    paul = Person('Paul', '', '', 'paulrobiquet@yahoo.fr')
+    franz = Person('Franz', '', '', 'franzuze@gmail.com')
+    elo = Person('Elo', '', '', 'dodiem2@hotmail.com')
+    l = [nico, mathilde, elodie_h, leandre, caro, paul, franz, elo]
+    c = [(nico, mathilde), (elodie_h, leandre), (caro, paul), (franz, elo)]
+    return [l, c]
 
 remim = Person('Remi', 'Melisson', 'remi', 'rmelisson@gmail.com')
 mkton = Person('mk', 'Tom', 'mkton', '0.mkton.0@gmail.com')
 robot = Person("Rob", "Ho", "we're the robots", "remi.melisson@hotmail.fr")
+
 #lc = ([robot, mkton, remim], [])
 
-lc = create_list()
+lc = create_fr_list()
 
-#giftMixer = GiftMixer(lc[0], lc[1])
+giftMixer = GiftMixer(lc[0], lc[1])
 #giftMixer.mix()
 #giftMixer.report()
 
